@@ -24,7 +24,7 @@ export default function AppRouter() {
                 <Switch>
                     <PublicRoute exact path={routes.home} component={HomePage}></PublicRoute>
                     <PublicRoute exact path={routes.login} component={LoginPage}/>
-                    <PrivateRoute exact path={routes.register} component={RegisterPage}/>
+                    <PublicRoute exact path={routes.register} component={RegisterPage}/>
                     <PrivateRoute exact path={routes.account} component={AccountPage}/>
                     <PrivateRoute exact path={routes.bookings} component={BookingsPage}/>
                     <PrivateRoute exact path={routes.booking} component={BookingPage}/>

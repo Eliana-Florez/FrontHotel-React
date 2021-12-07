@@ -15,12 +15,12 @@ export default function LoginPage() {
                     <Form>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Nombre de Usuario</Form.Label>
-                            <Form.Control type="email" placeholder="Nombre de Usuario" />
+                            <Form.Control type="email" placeholder="email" />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword">
                             <Form.Label>Contraseña</Form.Label>
-                            <Form.Control type="password" placeholder="Contraseña" />
+                            <Form.Control type="password" placeholder="password" />
                         </Form.Group>
                         <br/>
 
