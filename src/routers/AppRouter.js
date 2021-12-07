@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import AccountPage from "../pages/AccountPage"
 import BookingPage from "../pages/BookingPage"

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 export default class EditClient extends Component {
 
     constructor(props) {
@@ -128,69 +129,84 @@ export default class EditClient extends Component {
 
     render() {
         return (<div className="form-wrapper" >
-            <Form onSubmit={this.onSubmit}>
+ <Form onSubmit={this.onSubmit}>
                 <h1>Datos personales</h1><br></br>
-                <div class="input-group">
-                <Form.Group controlId="nombresClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Nombres</Form.Label>
-                    <Form.Control type="text" value={this.state.name} onChange={this.onChangeNombresCliente} />
-                </Form.Group>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="nombresClient" >
+                            <Form.Label>Nombres</Form.Label>
+                            <Form.Control type="text" value={this.state.name} onChange={this.onChangeNombresCliente} />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="apellidosClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>Apellidos</Form.Label>
+                            <Form.Control type="text" value={this.state.lastName} onChange={this.onChangeApellidosCliente} />
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="cedulaClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>Documento de identidad</Form.Label>
+                            <Form.Control type="text" value={this.state.id} onChange={this.onChangeCedulaCliente} />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="ciudadOrigenClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>Ciudad de origen</Form.Label>
+                            <Form.Control type="text" value={this.state.city} onChange={this.onChangeCiudadOrigenCliente} />
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="telefonoClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>Teléfono</Form.Label>
+                            <Form.Control type="text" value={this.state.phone} onChange={this.onChangeTelefonoCliente} />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="emailClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control type="email" value={this.state.email} onChange={this.onChangeEmailCliente} />
+                        </Form.Group>
+                    </Col>
+                </Row>
 
-                <Form.Group controlId="apellidosClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Apellidos</Form.Label>
-                    <Form.Control type="text" value={this.state.lastName} onChange={this.onChangeApellidosCliente} />
-                </Form.Group>
-                </div>
-                <div class="input-group">
-                <Form.Group controlId="cedulaClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Documento de identidad</Form.Label>
-                    <Form.Control type="text" value={this.state.id} onChange={this.onChangeCedulaCliente} />
-                </Form.Group>
-
-                <Form.Group controlId="ciudadOrigenClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Ciudad de origen</Form.Label>
-                    <Form.Control type="text" value={this.state.city} onChange={this.onChangeCiudadOrigenCliente} />
-                </Form.Group>
-                </div>
-                <div class="input-group">
-                <Form.Group controlId="telefonoClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Teléfono</Form.Label>
-                    <Form.Control type="text" value={this.state.phone} onChange={this.onChangeTelefonoCliente} />
-                </Form.Group>
-
-                <Form.Group controlId="emailClient" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" value={this.state.email} onChange={this.onChangeEmailCliente} />
-                </Form.Group>
-                </div>
 
                 <br></br><br></br><h1>Información sobre la reserva</h1><br></br>
-
-                <div class="input-group">
-                <Form.Group controlId="numPersonas" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Número de personas</Form.Label>
-                    <Form.Control type="text" value={this.state.num} onChange={this.onChangeNumPersonasCliente} />
-                </Form.Group>
-
-                <Form.Group controlId="infoHabitacion" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Habitaciones</Form.Label>
-                    <Form.Control type="text" value={this.state.room} onChange={this.onChangeInfoHabitacionCliente} />
-                </Form.Group>
-                </div>
-                <div class="input-group">
-                <Form.Group controlId="fechaIngreso" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>Fecha de ingreso</Form.Label>
-                    <Form.Control type="text" value={this.state.dateIngreso} onChange={this.onChangeFechaIngresoCliente} />
-                </Form.Group>
-
-                <Form.Group controlId="fechaSalida" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
-                    <Form.Label>fechaSalida</Form.Label>
-                    <Form.Control type="text" value={this.state.dateSalida} onChange={this.onChangeFechaSalidaCliente} />
-                </Form.Group>
-                </div><br></br><center>
-                <Button variant="danger" size="lg" block="block" type="submit" >
-                    Actualizar
-                </Button></center>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="numPersonas" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>Número de personas</Form.Label>
+                            <Form.Control type="text" value={this.state.num} onChange={this.onChangeNumPersonasCliente} />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="infoHabitacion" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>Habitaciones</Form.Label>
+                            <Form.Control type="text" value={this.state.room} onChange={this.onChangeInfoHabitacionCliente} />
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="fechaIngreso" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>Fecha de ingreso</Form.Label>
+                            <Form.Control type="text" value={this.state.dateIngreso} onChange={this.onChangeFechaIngresoCliente} />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="fechaSalida" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
+                            <Form.Label>fechaSalida</Form.Label>
+                            <Form.Control type="text" value={this.state.dateSalida} onChange={this.onChangeFechaSalidaCliente} />
+                        </Form.Group>
+                    </Col>
+                </Row><br></br>
+                    <Button variant="danger" size="lg" block="block" type="submit" >
+                        Actualizar
+                    </Button>
             </Form>
         </div>);
     }
