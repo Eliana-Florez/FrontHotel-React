@@ -11,7 +11,7 @@ export default function HomePage() {
             <Row className="mt-5">
                 <Col xs={{span:12}} md={{span:6}} className="mb-5">
                     <h1> Hotel Aroma cafetera</h1>
-                    <p>Aca ira el apartado d e inicio del aplicativo web Eliana</p>
+                    <p>En Circasia Quindí­o, en el corazón del eje cafetero, se levanta su Hotel "Aroma Cafetera", queremos brindarle a nuestros huéspedes la mejor experiencia de la cultura cafetera de nuestra región, comida tí­pica, 10 cómodas habitaciones, arte y arquitectura propias de una finca cafetera, entre otros.</p>
                     <diV>
                         <Link to={routes.login}>Ingresar</Link> para realizar las reservas en el Hotel
 
