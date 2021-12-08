@@ -115,7 +115,7 @@ export default class BookingsPage extends Component {
     render() {
         return (<div className="form-wrapper" >
             <Form onSubmit={this.onSubmit}>
-                <h1>Datos personales</h1><br></br>
+            <h1 className="shadow-sm text-success mt-5 p-3 text-center rounded">Datos personales</h1>
                 <Row>
                     <Col>
                         <Form.Group controlId="nombresClient" >
@@ -160,7 +160,7 @@ export default class BookingsPage extends Component {
                 </Row>
 
 
-                <br></br><br></br><h1>Información sobre la reserva</h1><br></br>
+                <h1 className="shadow-sm text-success mt-5 p-3 text-center rounded">Información sobre la reserva</h1>
                 <Row>
                     <Col>
                         <Form.Group controlId="numPersonas" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >

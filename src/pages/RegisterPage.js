@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
 
-export default class BookingsPage extends Component {
+export default class RegisterPage extends Component {
     constructor(props) {
         super(props)
 
@@ -55,7 +55,7 @@ export default class BookingsPage extends Component {
             password2: this.state.pass2User,
         };
 
-        axios.post('  ', userObject)
+        axios.post('https://backendhotel-backup.herokuapp.com/api/users/register', userObject)
             .then(res => console.log(res.data));
 
         this.setState({
@@ -82,12 +82,12 @@ export default class BookingsPage extends Component {
                             <Form.Control type="email" value={this.state.emailUser} onChange={this.onChangeEmailUser} />
                         </Form.Group>
                         <Form.Group controlId="contraseñaUser"  >
-                            <Form.Label>Contraseña</Form.Label>
+                            <Form.Label>Contraseña (mínimo 8 carácteres )</Form.Label>
                             <Form.Control type="password" value={this.state.passUser} onChange={this.onChangePasswordUser} />
                         </Form.Group>
                         <Form.Group controlId="contraseñaUser2" class="col-xs-6 col-sm-6 col-md-6 px-4 py-2" >
                             <Form.Label>Repita la contraseña</Form.Label>
-                            <Form.Control type="password" value={this.state.password2} onChange={this.onChangePassword2User} />
+                            <Form.Control type="password" value={this.state.pass2User} onChange={this.onChangePassword2User} />
                         </Form.Group>
                         <Button variant="danger" size="lg" block="block" type="submit" >
                             Registrarse

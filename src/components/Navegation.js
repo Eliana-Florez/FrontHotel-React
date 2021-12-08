@@ -21,7 +21,7 @@ export default function Navegation() {
                 <Nav className="me-auto">
                     <Nav.Link as={NavLink} to={routes.bookings} >Reservas</Nav.Link>
                     <Nav.Link as={NavLink} to={routes.booking} >Listado reservas</Nav.Link>
-                    <Nav.Link as={NavLink} to={routes.admin.users}>Usuarios</Nav.Link>
+                    <Nav.Link as={NavLink} to={routes.users}>Usuarios</Nav.Link>
                 </Nav>
                 <Nav>
                     <Nav.Link as={NavLink} to={routes.login}>Login</Nav.Link>

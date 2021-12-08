@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from "react";
 import useAuth from "../auth/useAuth"
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 
@@ -15,12 +14,12 @@ export default function LoginPage() {
                     <Form>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Nombre de Usuario</Form.Label>
-                            <Form.Control type="email" placeholder="email" />
+                            <Form.Control type="email" placeholder="Nombre de Usuario" />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword">
                             <Form.Label>Contraseña</Form.Label>
-                            <Form.Control type="password" placeholder="password" />
+                            <Form.Control type="password" placeholder="Contraseña" />
                         </Form.Group>
                         <br/>
 
