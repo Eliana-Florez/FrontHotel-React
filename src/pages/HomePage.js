@@ -8,6 +8,7 @@ import routes from '../helpers/routes';
 export default function HomePage() {
     return (
         <Container>
+            <Row className="m-5 p-5 "></Row>
             <Row className="mt-5">
                 <Col xs={{span:12}} md={{span:6}} className="mb-5">
                     <h1> Hotel Aroma cafetera</h1>
