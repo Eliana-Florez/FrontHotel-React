@@ -26,7 +26,6 @@ export default function Navegation() {
                 <Nav>
                     <Nav.Link as={NavLink} to={routes.login}>Login</Nav.Link>
                     <Nav.Link as={NavLink} to={routes.register}>Registrar</Nav.Link>
-                    <Nav.Link as={NavLink} to={routes.account}>Cuenta</Nav.Link>
                     <Nav.Link to={routes.account} onClick={logout} >Cerrar Sesion</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
