@@ -18,25 +18,16 @@ export default function Navegation() {
 
             <Navbar.Toggle arial-conrols="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav" >
-                <Row>
-                <Col>
-                <Nav  className="mr-5 pr-5">
+                <Nav >
                     <Nav.Link as={NavLink} to={routes.bookings} >Reservas</Nav.Link>
                     <Nav.Link as={NavLink} to={routes.booking} >Listado reservas</Nav.Link>
                     <Nav.Link as={NavLink} to={routes.users}>Usuarios</Nav.Link>
                 </Nav>
-                </Col> 
-                <Col className="mx-5 px-5"></Col>
-                <Col className="mx-5 px-5"></Col>
-                <Col className="mx-5 px-5"></Col>
-                <Col className="ml-2 pl-2 ">
                 <Nav>
                     <Nav.Link as={NavLink} to={routes.login}>Login</Nav.Link>
                     <Nav.Link as={NavLink} to={routes.register}>Registrar</Nav.Link>
                     <Nav.Link to={routes.account} onClick={logout} >Cerrar Sesion</Nav.Link>
                 </Nav>
-                </Col>  
-                </Row>
             </Navbar.Collapse>
         </Navbar>
     )
